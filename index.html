@@ -9,12 +9,15 @@
         <h1>Text Encryptor</h1>
         <form onsubmit="event.preventDefault(), encryptText()">
             <h2>Encrypt Text</h2>
+            
             <br />
             <label for="decryptedInput">Input text:</label>
             <input type="text" name="decryptedInput" id="decryptedInput" required>
+            
             <br />
             <label for="passInput">Input Password: </label>
             <input type="text" name="passInput" id="passInput" required maxlength=5>
+            
             <p>Password Location: </p>
             <input required value="beginning" type ="radio" id="beginning" name="passLocation">
             <label for="beginning"><span></span>Beginning</label>
@@ -22,21 +25,21 @@
             <input required value="end" type ="radio" id="end" name="passLocation">
             <label for="end"><span></span>End</label>
             <br />
+            
             <button id="encryptBtn">Encrypt</button>
 
         </form>
 
         <form onsubmit="event.preventDefault(), decryptText()">
             <h2>Decrypt Text</h2>
-            <br />
             
+            <br />
             <label for="encryptedInput">Input text:</label>
             <input type="text" name="encryptedInput" id="encryptedInput" required>
-            
-            <br />
 
-            <label for="passInput">Password length: </label>
-            <input type="number" name="passLength" id="passLength" required>
+            <br />
+            <label for="passInput">Input Password: </label>
+            <input type="text" name="decryptPass" id="decryptPass" required>
             
             <p>Password Location: </p>
             <input required value="beginning" type ="radio" id="beginning" name="encryptedPassLocation">
@@ -45,12 +48,14 @@
             <input required value="end" type ="radio" id="end" name="encryptedPassLocation">
             <label for="end"><span></span>End</label>
             <br />
+            
             <button id="decryptBtn">Decrypt</button>
         </form>
         
         <div id="outputDiv">
-            <h2>Output</h2>
+            <h2 id="outputH2">Output</h2>
             <h3></h3>
         </div>
+
     </body>
 </html> 
